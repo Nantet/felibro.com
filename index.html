@@ -1,0 +1,461 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Felibro | Ecossistema Criativo Digital</title>
+    <meta name="description" content="Agência premium de audiovisual, tecnologia e marketing.">
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&family=Syne:wght@700;800&display=swap"
+        rel="stylesheet">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body class="dark-mode">
+
+    <!-- BACKGROUND -->
+    <div class="glow-bg"></div>
+
+    <!-- NAVBAR -->
+    <header class="navbar" id="navbar">
+        <div class="container nav-container">
+
+            <a href="#home" class="logo">FELIBRO<span>.</span></a>
+
+            <nav class="nav-menu">
+                <a href="#servicos">Serviços</a>
+                <a href="#sobre">Sobre</a>
+                <a href="#contato">Contato</a>
+            </nav>
+
+            <a href="https://wa.me/seunumeroaqui" class="btn-primary-sm">
+                Falar com Especialista
+            </a>
+
+            <button class="mobile-toggle" aria-label="Abrir menu">
+                <span></span>
+                <span></span>
+            </button>
+
+        </div>
+    </header>
+
+    <!-- MAIN -->
+    <main>
+
+        <!-- HERO -->
+        <section class="hero" id="home">
+            <div class="container hero-grid">
+
+                <div class="hero-content">
+                    <div class="badge">Agência Digital 360°</div>
+
+                    <h1>
+                        Transformando visão em
+                        <span class="text-gradient">impacto digital.</span>
+                    </h1>
+
+                    <p>
+                        Audiovisual de elite, engenharia de software e estratégias de tráfego
+                        integradas em um único ecossistema criativo.
+                    </p>
+
+                    <div class="hero-actions">
+                        <a href="#servicos" class="btn-main">Iniciar Projeto</a>
+
+                        <div class="scroll-hint">
+                            <span class="mouse"></span>
+                            <p>Explore</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- VISUAL 3D -->
+                <div class="hero-visual">
+                    <div class="nexus-core">
+                        <div class="sphere-blur"></div>
+
+                        <div class="ring r1"></div>
+                        <div class="ring r2"></div>
+                        <div class="ring r3"></div>
+
+                        <div class="floating-card c1"><span>Desenvolvedor Web</span></div>
+                        <div class="floating-card c2"><span>VideoMaker</span></div>
+                        <div class="floating-card c3"><span>Fotógrafos</span></div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- SERVIÇOS -->
+        <section class="servicos" id="servicos">
+
+            <div class="container section-header">
+                <h2>
+                    Nossos <span class="text-gradient">Serviços</span>
+                </h2>
+            </div>
+
+            <!-- CARROSSEL -->
+            <div class="carousel-container">
+                <div class="carousel-track" id="carouselTrack">
+
+                    <div class="service-card">
+                        <div class="card-glass">
+                            <span class="icon">🎥</span>
+                            <h3>Videomaker</h3>
+                            <p>Produções cinematográficas que capturam a essência da sua marca.</p>
+                        </div>
+                    </div>
+
+                    <div class="service-card">
+                        <div class="card-glass">
+                            <span class="icon">💻</span>
+                            <h3>Desenvolvimento Web</h3>
+                            <p>Engenharia de software focada em UX e conversão.</p>
+                        </div>
+                    </div>
+
+                    <div class="service-card">
+                        <div class="card-glass">
+                            <span class="icon">📸</span>
+                            <h3>Fotografia</h3>
+                            <p>Imagens profissionais que comunicam autoridade.</p>
+                        </div>
+                    </div>
+
+                    <div class="service-card">
+                        <div class="card-glass">
+                            <span class="icon">📈</span>
+                            <h3>Marketing Digital</h3>
+                            <p>Estratégias para escalar faturamento real.</p>
+                        </div>
+                    </div>
+
+                    <div class="service-card">
+                        <div class="card-glass">
+                            <span class="icon">🎬</span>
+                            <h3>Edição de Vídeo</h3>
+                            <p>Pós-produção avançada para máxima retenção.</p>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+        </section>
+
+        <section id="instagram-experience" class="insta-viewer">
+            <div class="container">
+                <div class="header-minimal" data-aos="fade-down">
+                    <span class="eyebrow">Social Presence</span>
+                    <h2>Curadoria <span class="text-gradient">@felibro.oficial</span></h2>
+                </div>
+
+                <div class="insta-interface-wrapper" data-aos="zoom-in-up">
+                    <div class="insta-feed-side">
+                        <div class="bento-grid">
+                            <div class="bento-item main-post"
+                                onclick="updateViewer('Cinematografia', 'Bastidores da última produção realizada no Rio de Janeiro.', '12.5k')">
+                                <img src="./img/video.mp4" alt="Video">
+                                <div class="post-glow"></div>
+                            </div>
+                            <div class="bento-item"
+                                onclick="updateViewer('Web Design', 'Interface minimalista para ecossistema tech.', '8.2k')">
+                                <img src="./img/degdeg.png" alt="Code">
+                            </div>
+                            <div class="bento-item"
+                                onclick="updateViewer('Branding', 'Identidade visual criada para startup de AI.', '5.1k')">
+                                <img src="./img/designer.jpeg" alt="Design">
+                            </div>
+                            <div class="bento-item"
+                                onclick="updateViewer('Photography', 'Ensaio executivo em estúdio próprio.', '3.9k')">
+                                <img src="./img/png 1.png" alt="Portrait">
+                            </div>
+                        </div>
+                    </div>
+
+                    <aside class="insta-detail-side glass-effect">
+                        <div class="detail-header">
+                            <div class="profile-mini">
+                                <div class="avatar">F</div>
+                                <div>
+                                    <p class="username">felibro.oficial</p>
+                                    <p class="location">Rio de Janeiro, Brasil</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="detail-content">
+                            <h3 id="view-title">Cinematografia</h3>
+                            <p id="view-desc">Explorando novas texturas e iluminação volumétrica para projetos de alto
+                                padrão.</p>
+                        </div>
+
+                        <div class="detail-footer">
+                            <div class="interactions">
+                                <span id="view-likes">❤️ 12.5k likes</span>
+                                <span class="share-icon">↗️</span>
+                            </div>
+                            <a href="https://instagram.com/felibro.oficial" target="_blank" class="btn-follow">Seguir no
+                                Instagram</a>
+                        </div>
+                    </aside>
+                </div>
+            </div>
+        </section>
+
+        <section class="cta-section">
+            <div class="container">
+
+                <!-- ================= CTA PRINCIPAL ================= -->
+                <section class="cta-section">
+                    <div class="container">
+
+                        <div class="cta-box glass-effect">
+
+                            <!-- Glow -->
+                            <div class="cta-glow"></div>
+
+                            <!-- HEADER -->
+                            <div class="cta-content">
+
+                                <span class="cta-badge">Alta Performance Digital</span>
+
+                                <h2>
+                                    Sua marca pronta para o
+                                    <span class="text-gradient">próximo nível.</span>
+                                </h2>
+
+                                <p>
+                                    Nós não criamos apenas projetos. Criamos posicionamento,
+                                    autoridade e crescimento real.
+                                </p>
+
+                            </div>
+
+                            <!-- CARDS -->
+                            <div class="cta-cards">
+
+                                <div class="cta-card">
+                                    <h3>🎥 Audiovisual</h3>
+                                    <p>Produções cinematográficas que geram percepção de valor.</p>
+                                </div>
+
+                                <div class="cta-card">
+                                    <h3>💻 Tecnologia</h3>
+                                    <p>Sites e sistemas feitos para converter e escalar.</p>
+                                </div>
+
+                                <div class="cta-card">
+                                    <h3>📈 Crescimento</h3>
+                                    <p>Estratégias focadas em resultado real.</p>
+                                </div>
+
+                            </div>
+
+                            <div class="cta-container">
+                                <div class="cta-actions">
+                                    <a href="https://wa.me/seunumeroaqui" class="btn-specialist"
+                                        aria-label="Falar com especialista no WhatsApp">
+                                        <span class="btn-text">Falar com Especialista</span>
+                                        <div class="btn-glow"></div>
+                                    </a>
+
+                                    <a href="#portfolio" class="btn-outline-pro">
+                                        <span class="btn-text">Ver Projetos</span>
+                                        <span class="btn-icon">
+                                            <svg viewBox="0 0 24 24" aria-hidden="true">
+                                                <path d="M7 17L17 7M17 7H9M17 7V15" />
+                                            </svg>
+                                        </span>
+                                    </a>
+                                </div>
+
+                                <p class="cta-micro">
+                                    <i class="icon-clock"></i> Resposta em até <strong>24h</strong> • Consultoria
+                                    gratuita • Sem compromisso
+                                </p>
+
+                                <div class="cta-proof">
+                                    <span class="proof-tag">
+                                        <small>✨</small> +50 projetos
+                                    </span>
+                                    <span class="proof-tag">
+                                        <small>📊</small> ROI focado
+                                    </span>
+                                    <span class="proof-tag">
+                                        <small>🚀</small> Alta conversão
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                </section>
+
+
+                <!-- ================= SOBRE + EQUIPE PREMIUM ================= -->
+                <section class="about-section" id="contato">
+                    <div class="container">
+
+                        <div class="about-wrapper">
+
+                            <!-- TEXTO -->
+                            <div class="about-content">
+
+                                <span class="badge-outline">Quem Somos</span>
+
+                                <h2>
+                                    O nexo entre
+                                    <span class="text-gradient-alt">criatividade, tecnologia</span>
+                                    e performance.
+                                </h2>
+
+                                <p>
+                                    A Felibro nasceu para quebrar o padrão de agências comuns.
+                                    Unimos audiovisual de alto impacto, engenharia digital e estratégias
+                                    de crescimento para transformar marcas em referências.
+                                </p>
+
+                                <p>
+                                    Não entregamos apenas projetos. Construímos posicionamento,
+                                    autoridade e resultados reais no digital.
+                                </p>
+
+                                <div class="about-actions">
+                                    <a href="#" class="btn-specialist" aria-label="Entre em contato conosco">
+                                        <span class="btn-text">Entre em contato</span>
+                                        <div class="shimmer"></div>
+                                    </a>
+                                </div>
+
+                            </div>
+
+                            <!-- VISUAL 3D DIFERENTE -->
+                            <div class="about-visual">
+
+                                <div class="about-orb"></div>
+
+                                <div class="about-cube">
+                                    <div class="face front"></div>
+                                    <div class="face back"></div>
+                                    <div class="face left"></div>
+                                    <div class="face right"></div>
+                                    <div class="face top"></div>
+                                    <div class="face bottom"></div>
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                        <!-- ================= EQUIPE ================= -->
+                        <div class="team-section">
+
+                            <div class="section-header">
+                                <h2>
+                                    Profissionais que fazem acontecer
+                                </h2>
+                                <p>Especialistas em cada etapa do crescimento digital</p>
+                            </div>
+
+                            <div class="team-grid">
+
+                                <div class="team-card">
+                                    <div class="team-img"></div>
+                                    <h3>Diretor Criativo</h3>
+                                    <p>Audiovisual & Branding</p>
+                                </div>
+
+                                <div class="team-card">
+                                    <div class="team-img"></div>
+                                    <h3>Desenvolvedor</h3>
+                                    <p>Web & Sistemas</p>
+                                </div>
+
+                                <div class="team-card">
+                                    <div class="team-img"></div>
+                                    <h3>Gestor de Tráfego</h3>
+                                    <p>Marketing & Performance</p>
+                                </div>
+
+                                <div class="team-card">
+                                    <div class="team-img"></div>
+                                    <h3>Editor de Vídeo</h3>
+                                    <p>Pós-produção</p>
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+                </section>
+
+
+                <footer class="footer-pro">
+                    <div class="container footer-grid">
+
+                        <div class="footer-info">
+                            <a href="#" class="logo-footer">FELIBRO<span>.</span></a>
+                            <p class="footer-tagline">
+                                O nexo perfeito entre criatividade, tecnologia e performance. Transformando dados em
+                                desejo e cliques em clientes.
+                            </p>
+                            <div class="footer-status">
+                                <span class="status-dot"></span> Disponível para novos projetos
+                            </div>
+                        </div>
+
+                        <div class="footer-nav">
+                            <div class="nav-col">
+                                <h4>Menu</h4>
+                                <ul>
+                                    <li><a href="#home">Início</a></li>
+                                    <li><a href="#servicos">Expertise</a></li>
+                                    <li><a href="#contato">Contato</a></li>
+                                </ul>
+                            </div>
+
+                            <div class="nav-col">
+                                <h4>Social</h4>
+                                <ul>
+                                    <li><a href="#" target="_blank">Instagram</a></li>
+                                    <li><a href="#" target="_blank">LinkedIn</a></li>
+                                    <li><a href="#" target="_blank">Behance</a></li>
+                                </ul>
+                            </div>
+
+                            <div class="nav-col">
+                                <h4>Legal</h4>
+                                <ul>
+                                    <li><a href="#">Privacidade</a></li>
+                                    <li><a href="#">Termos</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="footer-bottom">
+                        <div class="container">
+                            <p>&copy; 2026 Felibro. Crafted with ✨ for high performance.</p>
+                            <button class="back-to-top" onclick="window.scrollTo({top: 0, behavior: 'smooth'})">
+                                Voltar ao topo ↑
+                            </button>
+                        </div>
+                    </div>
+                </footer>
+
+                <!-- JS -->
+                <script src="script.js"></script>
+
+</body>
+
+</html>
