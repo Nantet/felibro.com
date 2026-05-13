@@ -1,71 +1,154 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-BR">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Felibro | Ecossistema Criativo Digital</title>
-    <meta name="description" content="Agência premium de audiovisual, tecnologia e marketing.">
+    <!-- ── SEO ── -->
+    <title>Felibro | Ecossistema Criativo Digital — Audiovisual, Tech & Marketing no Rio de Janeiro</title>
+    <meta name="description"
+        content="Agência premium de audiovisual, tecnologia e marketing digital no Rio de Janeiro. Transformamos sua marca em referência com produções cinematográficas, desenvolvimento web e estratégias de crescimento.">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://felibro.com.br/">
 
+    <!-- ── Open Graph (WhatsApp, LinkedIn, Facebook) ── -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://felibro.com.br/">
+    <meta property="og:title" content="Felibro | Ecossistema Criativo Digital">
+    <meta property="og:description"
+        content="Audiovisual de elite, engenharia de software e estratégias de tráfego integradas em um único ecossistema criativo.">
+    <meta property="og:image" content="https://felibro.com.br/img/og-cover.jpg">
+    <meta property="og:locale" content="pt_BR">
+    <meta property="og:site_name" content="Felibro">
+
+    <!-- ── Twitter Card ── -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Felibro | Ecossistema Criativo Digital">
+    <meta name="twitter:description"
+        content="Audiovisual de elite, engenharia de software e estratégias de tráfego num único ecossistema criativo.">
+    <meta name="twitter:image" content="https://felibro.com.br/img/og-cover.jpg">
+
+    <!-- ── Favicon ── -->
+    <link rel="icon" href="/favicon.ico" sizes="any">
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+    <link rel="manifest" href="/site.webmanifest">
+    <meta name="theme-color" content="#050505">
+
+    <!-- ── Fontes: preconnect primeiro, depois stylesheet ── -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&family=Syne:wght@700;800&display=swap"
-        rel="stylesheet">
+    <link rel="preload"
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&family=Syne:wght@700;800&display=swap"
+        as="style" onload="this.rel='stylesheet'">
+    <noscript>
+        <link
+            href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&family=Syne:wght@700;800&display=swap"
+            rel="stylesheet">
+    </noscript>
 
+    <!-- ── CSS crítico inline (evita FOUC no navbar/hero) ── -->
+    <style>
+        :root {
+            --bg-color: #050505;
+        }
+
+        body {
+            background: var(--bg-color);
+            color: #f5f5f5;
+            margin: 0;
+        }
+
+        .navbar {
+            position: fixed;
+            top: 1.5rem;
+            left: 50%;
+            transform: translateX(-50%);
+            z-index: 1000;
+        }
+    </style>
+
+    <!-- ── Stylesheet principal ── -->
     <link rel="stylesheet" href="styles.css">
+
+    <!-- ── Schema.org: dados estruturados da organização ── -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "ProfessionalService",
+        "name": "Felibro",
+        "url": "https://felibro.com.br",
+        "logo": "https://felibro.com.br/img/logo.svg",
+        "description": "Agência premium de audiovisual, tecnologia e marketing digital no Rio de Janeiro.",
+        "address": {
+            "@type": "PostalAddress",
+            "addressLocality": "Rio de Janeiro",
+            "addressRegion": "RJ",
+            "addressCountry": "BR"
+        },
+        "sameAs": [
+            "https://instagram.com/felibro.oficial",
+            "https://linkedin.com/company/felibro"
+        ]
+    }
+    </script>
 </head>
 
-<body class="dark-mode">
+<body>
 
-    <!-- BACKGROUND -->
-    <div class="glow-bg"></div>
+    <!-- ── Skip navigation (acessibilidade — leitores de tela / teclado) ── -->
+    <a href="#conteudo-principal" class="skip-link">Pular para o conteúdo principal</a>
 
-    <header class="navbar">
+    <!-- BACKGROUND decorativo — oculto para AT -->
+    <div class="glow-bg" aria-hidden="true"></div>
+
+    <!-- ════════════════ CABEÇALHO / NAVBAR ════════════════ -->
+    <header class="navbar" role="banner">
         <div class="container nav-container">
 
             <!-- LOGO -->
-            <a href="#home" class="logo" aria-label="FELIBRO Home">
-                FELIBRO<span>.</span>
+            <a href="#home" class="logo" aria-label="Felibro — página inicial">
+                FELIBRO<span aria-hidden="true">.</span>
             </a>
 
-            <!-- MENU -->
-            <nav class="nav-menu" aria-label="Navegação principal">
+            <!-- MENU PRINCIPAL -->
+            <nav class="nav-menu" id="nav-menu" aria-label="Navegação principal">
                 <a href="#servicos">Serviços</a>
                 <a href="#sobre">Sobre</a>
-                <a href="#portifolio">Portfólio</a>
+                <a href="#portfolio">Portfólio</a>
                 <a href="#contato">Contato</a>
             </nav>
 
             <!-- AÇÕES -->
             <div class="nav-actions">
-
                 <a href="#contato" class="btn-primary-sm">
                     Falar com especialista
                 </a>
 
                 <!-- HAMBURGER -->
-                <button class="mobile-toggle" aria-label="Abrir menu mobile">
-                    <span></span>
-                    <span></span>
-                    <span></span>
+                <button class="mobile-toggle" aria-controls="nav-menu" aria-expanded="false"
+                    aria-label="Abrir menu de navegação" type="button">
+                    <span aria-hidden="true"></span>
+                    <span aria-hidden="true"></span>
+                    <span aria-hidden="true"></span>
                 </button>
-
             </div>
 
         </div>
     </header>
 
-    <main>
+    <!-- ════════════════ CONTEÚDO PRINCIPAL ════════════════ -->
+    <main id="conteudo-principal">
 
-        <!-- HERO -->
-        <section class="hero" id="home">
+        <!-- ── HERO ── -->
+        <section class="hero" id="home" aria-labelledby="hero-titulo">
             <div class="container hero-grid">
 
                 <div class="hero-content">
-                    <div class="badge">Agência Digital 360°</div>
+                    <p class="badge" role="note">Agência Digital 360°</p>
 
-                    <h1>
+                    <h1 id="hero-titulo">
                         Transformando visão em
                         <span class="text-gradient">impacto digital.</span>
                     </h1>
@@ -78,121 +161,139 @@
                     <div class="hero-actions">
                         <a href="#servicos" class="btn-main">Iniciar Projeto</a>
 
-                        <div class="scroll-hint">
+                        <div class="scroll-hint" aria-hidden="true">
                             <span class="mouse"></span>
                             <p>Explore</p>
                         </div>
                     </div>
                 </div>
 
-                <div class="hero-3d">
+                <!-- Canvas Three.js — decorativo, sem conteúdo informativo -->
+                <div class="hero-3d" aria-hidden="true">
                     <canvas id="heroCanvas"></canvas>
                 </div>
 
             </div>
         </section>
 
-        <!-- SERVIÇOS -->
-        <section class="servicos" id="servicos">
+        <!-- ── SERVIÇOS ── -->
+        <section class="servicos" id="servicos" aria-labelledby="servicos-titulo">
 
             <div class="container section-header">
-                <h2>
+                <h2 id="servicos-titulo">
                     Nossos <span class="text-gradient">Serviços</span>
                 </h2>
             </div>
 
-            <div class="carousel-container">
-                <div class="carousel-track" id="carouselTrack">
+            <!-- role="region" + aria-label para o carrossel ser anunciado corretamente -->
+            <div class="carousel-container" role="region" aria-label="Carrossel de serviços" tabindex="0">
 
-                    <div class="service-card">
+                <div class="carousel-track" id="carouselTrack" aria-live="off">
+
+                    <article class="service-card">
                         <div class="card-glass">
-                            <span class="icon">🎥</span>
+                            <span class="icon" aria-hidden="true">🎥</span>
                             <h3>Videomaker</h3>
                             <p>Produções cinematográficas que capturam a essência da sua marca.</p>
                         </div>
-                    </div>
+                    </article>
 
-                    <div class="service-card">
+                    <article class="service-card">
                         <div class="card-glass">
-                            <span class="icon">💻</span>
+                            <span class="icon" aria-hidden="true">💻</span>
                             <h3>Desenvolvimento Web</h3>
                             <p>Engenharia de software focada em UX e conversão.</p>
                         </div>
-                    </div>
+                    </article>
 
-                    <div class="service-card">
+                    <article class="service-card">
                         <div class="card-glass">
-                            <span class="icon">📸</span>
+                            <span class="icon" aria-hidden="true">📸</span>
                             <h3>Fotografia</h3>
                             <p>Imagens profissionais que comunicam autoridade.</p>
                         </div>
-                    </div>
+                    </article>
 
-                    <div class="service-card">
+                    <article class="service-card">
                         <div class="card-glass">
-                            <span class="icon">📈</span>
+                            <span class="icon" aria-hidden="true">📈</span>
                             <h3>Marketing Digital</h3>
                             <p>Estratégias para escalar faturamento real.</p>
                         </div>
-                    </div>
+                    </article>
 
-                    <div class="service-card">
+                    <article class="service-card">
                         <div class="card-glass">
-                            <span class="icon">🎬</span>
+                            <span class="icon" aria-hidden="true">🎬</span>
                             <h3>Edição de Vídeo</h3>
                             <p>Pós-produção avançada para máxima retenção.</p>
                         </div>
-                    </div>
+                    </article>
 
                 </div>
             </div>
 
         </section>
 
-        <!-- INSTAGRAM -->
-        <section id="instagram-experience" class="insta-viewer">
+        <!-- ── INSTAGRAM / SOCIAL PROOF ── -->
+        <section class="insta-viewer" id="portfolio" aria-labelledby="insta-titulo">
 
             <div class="container">
 
-                <div class="header-minimal">
-                    <span class="eyebrow">Social Presence</span>
-                    <h2>Curadoria <span class="text-gradient">@felibro.oficial</span></h2>
-                </div>
+                <header class="header-minimal">
+                    <span class="eyebrow" aria-hidden="true">Social Presence</span>
+                    <h2 id="insta-titulo">
+                        Curadoria <span class="text-gradient">@felibro.oficial</span>
+                    </h2>
+                </header>
 
                 <div class="insta-interface-wrapper">
 
+                    <!-- Feed de mídia -->
                     <div class="insta-feed-side">
+                        <div class="bento-grid" role="list" aria-label="Galeria de trabalhos">
 
-                        <div class="bento-grid">
-
-                            <div class="bento-item main-post">
-                                <video src="./img/video.mp4" autoplay muted loop playsinline></video>
-                                <div class="post-glow"></div>
+                            <div class="bento-item main-post" role="listitem">
+                                <!-- autoplay apenas com muted + playsinline para iOS -->
+                                <video src="./img/video.mp4" autoplay muted loop playsinline preload="metadata"
+                                    aria-label="Vídeo de cinematografia Felibro">
+                                </video>
+                                <div class="post-glow" aria-hidden="true"></div>
                             </div>
 
-                            <div class="bento-item">
-                                <img src="./img/degdeg.png" alt="Código">
+                            <div class="bento-item" role="listitem">
+                                <img src="./img/degdeg.png" alt="Projeto de desenvolvimento de código" loading="lazy"
+                                    decoding="async" width="400" height="400">
                             </div>
 
-                            <div class="bento-item">
-                                <img src="./img/designer.jpeg" alt="Design">
+                            <div class="bento-item" role="listitem">
+                                <img src="./img/designer.jpeg" alt="Projeto de design gráfico" loading="lazy"
+                                    decoding="async" width="400" height="400">
                             </div>
 
-                            <div class="bento-item">
-                                <img src="./img/png 1.png" alt="Retrato">
+                            <div class="bento-item" role="listitem">
+                                <img src="./img/png 1.png" alt="Ensaio fotográfico de retrato" loading="lazy"
+                                    decoding="async" width="400" height="400">
                             </div>
 
                         </div>
-
                     </div>
 
-                    <aside class="insta-detail-side glass-effect">
+                    <!-- Sidebar de detalhes -->
+                    <aside class="insta-detail-side glass-effect" aria-label="Detalhes do perfil">
                         <div class="detail-header">
                             <div class="profile-mini">
-                                <div class="avatar">F</div>
+                                <div class="avatar" aria-hidden="true">F</div>
                                 <div>
                                     <p class="username">felibro.oficial</p>
-                                    <p class="location">Rio de Janeiro, Brasil</p>
+                                    <p class="location">
+                                        <svg aria-hidden="true" width="12" height="12" viewBox="0 0 24 24" fill="none"
+                                            stroke="currentColor" stroke-width="2">
+                                            <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z" />
+                                            <circle cx="12" cy="10" r="3" />
+                                        </svg>
+                                        Rio de Janeiro, Brasil
+                                    </p>
                                 </div>
                             </div>
                         </div>
@@ -205,13 +306,18 @@
                         </div>
 
                         <div class="detail-footer">
-                            <div class="interactions">
-                                <span id="view-likes">❤️ 12.5k likes</span>
-                                <span class="share-icon">↗️</span>
+                            <div class="interactions" aria-label="Estatísticas do post">
+                                <span id="view-likes">
+                                    <span aria-hidden="true">❤️</span>
+                                    <span>12,5 mil curtidas</span>
+                                </span>
+                                <button class="share-icon" aria-label="Compartilhar post" type="button">
+                                    ↗️
+                                </button>
                             </div>
 
                             <a href="https://instagram.com/felibro.oficial" target="_blank" rel="noopener noreferrer"
-                                class="btn-follow">
+                                class="btn-follow" aria-label="Seguir @felibro.oficial no Instagram (abre em nova aba)">
                                 Seguir no Instagram
                             </a>
                         </div>
@@ -223,20 +329,17 @@
 
         </section>
 
-        <!-- CTA -->
-        <section class="cta-section">
-
+        <!-- ── CTA ── -->
+        <section class="cta-section" aria-labelledby="cta-titulo">
             <div class="container">
 
                 <div class="cta-box glass-effect">
-
-                    <div class="cta-glow"></div>
+                    <div class="cta-glow" aria-hidden="true"></div>
 
                     <div class="cta-content">
+                        <span class="cta-badge" role="note">Alta Performance Digital</span>
 
-                        <span class="cta-badge">Alta Performance Digital</span>
-
-                        <h2>
+                        <h2 id="cta-titulo">
                             Sua marca pronta para o
                             <span class="text-gradient">próximo nível.</span>
                         </h2>
@@ -245,64 +348,66 @@
                             Nós não criamos apenas projetos. Criamos posicionamento,
                             autoridade e crescimento real.
                         </p>
-
                     </div>
 
                     <div class="cta-cards">
 
                         <div class="cta-card">
-                            <h3>🎥 Audiovisual</h3>
+                            <h3><span aria-hidden="true">🎥</span> Audiovisual</h3>
                             <p>Produções cinematográficas que geram percepção de valor.</p>
                         </div>
 
                         <div class="cta-card">
-                            <h3>💻 Tecnologia</h3>
+                            <h3><span aria-hidden="true">💻</span> Tecnologia</h3>
                             <p>Sites e sistemas feitos para converter e escalar.</p>
                         </div>
 
                         <div class="cta-card">
-                            <h3>📈 Crescimento</h3>
+                            <h3><span aria-hidden="true">📈</span> Crescimento</h3>
                             <p>Estratégias focadas em resultado real.</p>
                         </div>
 
                     </div>
 
                     <div class="cta-container">
-
                         <div class="cta-actions">
-                            <a href="https://wa.me/seunumeroaqui" class="btn-specialist">
+                            <a href="https://wa.me/5521999999999" class="btn-specialist" target="_blank"
+                                rel="noopener noreferrer"
+                                aria-label="Falar com especialista pelo WhatsApp (abre em nova aba)">
+                                <span class="btn-glow" aria-hidden="true"></span>
                                 <span class="btn-text">Falar com Especialista</span>
                             </a>
 
                             <a href="#portfolio" class="btn-outline-pro">
                                 <span class="btn-text">Ver Projetos</span>
+                                <svg aria-hidden="true" width="18" height="18" viewBox="0 0 24 24" fill="none"
+                                    stroke="currentColor" stroke-width="2">
+                                    <line x1="7" y1="17" x2="17" y2="7" />
+                                    <polyline points="7 7 17 7 17 17" />
+                                </svg>
                             </a>
                         </div>
 
                         <p class="cta-micro">
                             <strong>Resposta em até 24h</strong>
                         </p>
-
                     </div>
 
                 </div>
-
             </div>
-
         </section>
 
-        <!-- ================= SOBRE + EQUIPE PREMIUM ================= -->
-        <section class="about-section" id="contato">
+        <!-- ── SOBRE + EQUIPE ── -->
+        <section class="about-section" id="sobre" aria-labelledby="sobre-titulo">
             <div class="container">
 
                 <div class="about-wrapper">
 
-                    <!-- TEXTO -->
+                    <!-- Texto institucional -->
                     <div class="about-content">
+                        <span class="badge-outline" role="note">Quem Somos</span>
 
-                        <span class="badge-outline">Quem Somos</span>
-
-                        <h2>
+                        <h2 id="sobre-titulo">
                             O nexo entre
                             <span class="text-gradient-alt">criatividade, tecnologia</span>
                             e performance.
@@ -320,19 +425,16 @@
                         </p>
 
                         <div class="about-actions">
-                            <a href="#" class="btn-specialist" aria-label="Entre em contato conosco">
+                            <a href="#contato" class="btn-specialist" aria-label="Entre em contato com a Felibro">
                                 <span class="btn-text">Entre em contato</span>
-                                <div class="shimmer"></div>
+                                <div class="shimmer" aria-hidden="true"></div>
                             </a>
                         </div>
-
                     </div>
 
-                    <!-- VISUAL 3D DIFERENTE -->
-                    <div class="about-visual">
-
+                    <!-- Visual 3D — decorativo -->
+                    <div class="about-visual" aria-hidden="true">
                         <div class="about-orb"></div>
-
                         <div class="about-cube">
                             <div class="face front"></div>
                             <div class="face back"></div>
@@ -341,48 +443,46 @@
                             <div class="face top"></div>
                             <div class="face bottom"></div>
                         </div>
-
                     </div>
 
                 </div>
 
-                <!-- ================= EQUIPE ================= -->
-                <div class="team-section">
+                <!-- ── EQUIPE ── -->
+                <div class="team-section" id="contato">
 
                     <div class="section-header">
-                        <h2>
-                            Profissionais que fazem acontecer
-                        </h2>
+                        <h2>Profissionais que fazem acontecer</h2>
                         <p>Especialistas em cada etapa do crescimento digital</p>
                     </div>
 
-                    <div class="team-grid">
+                    <!-- Lista semântica de membros da equipe -->
+                    <ul class="team-grid" role="list">
 
-                        <div class="team-card">
-                            <div class="team-img"></div>
+                        <li class="team-card">
+                            <div class="team-img" aria-hidden="true"></div>
                             <h3>Diretor Criativo</h3>
-                            <p>Audiovisual & Branding</p>
-                        </div>
+                            <p>Audiovisual &amp; Branding</p>
+                        </li>
 
-                        <div class="team-card">
-                            <div class="team-img"></div>
+                        <li class="team-card">
+                            <div class="team-img" aria-hidden="true"></div>
                             <h3>Desenvolvedor</h3>
-                            <p>Web & Sistemas</p>
-                        </div>
+                            <p>Web &amp; Sistemas</p>
+                        </li>
 
-                        <div class="team-card">
-                            <div class="team-img"></div>
+                        <li class="team-card">
+                            <div class="team-img" aria-hidden="true"></div>
                             <h3>Gestor de Tráfego</h3>
-                            <p>Marketing & Performance</p>
-                        </div>
+                            <p>Marketing &amp; Performance</p>
+                        </li>
 
-                        <div class="team-card">
-                            <div class="team-img"></div>
+                        <li class="team-card">
+                            <div class="team-img" aria-hidden="true"></div>
                             <h3>Editor de Vídeo</h3>
                             <p>Pós-produção</p>
-                        </div>
+                        </li>
 
-                    </div>
+                    </ul>
 
                 </div>
 
@@ -391,23 +491,30 @@
 
     </main>
 
-    <footer class="footer-pro">
+    <!-- ════════════════ RODAPÉ ════════════════ -->
+    <footer class="footer-pro" role="contentinfo" aria-label="Rodapé do site">
         <div class="container footer-grid">
 
             <div class="footer-info">
-                <a href="#" class="logo-footer">FELIBRO<span>.</span></a>
+                <a href="#home" class="logo-footer" aria-label="Felibro — voltar ao início">
+                    FELIBRO<span aria-hidden="true">.</span>
+                </a>
+
                 <p class="footer-tagline">
                     O nexo perfeito entre criatividade, tecnologia e performance.
                 </p>
-                <div class="footer-status">
-                    <span class="status-dot"></span> Disponível para novos projetos
+
+                <div class="footer-status" role="status" aria-live="polite">
+                    <span class="status-dot" aria-hidden="true"></span>
+                    Disponível para novos projetos
                 </div>
             </div>
 
-            <div class="footer-nav">
+            <nav class="footer-nav" aria-label="Links do rodapé">
+
                 <div class="nav-col">
-                    <h4>Menu</h4>
-                    <ul>
+                    <h4 id="footer-menu">Menu</h4>
+                    <ul aria-labelledby="footer-menu">
                         <li><a href="#home">Início</a></li>
                         <li><a href="#servicos">Expertise</a></li>
                         <li><a href="#contato">Contato</a></li>
@@ -415,39 +522,59 @@
                 </div>
 
                 <div class="nav-col">
-                    <h4>Social</h4>
-                    <ul>
-                        <li><a href="#">Instagram</a></li>
-                        <li><a href="#">LinkedIn</a></li>
-                        <li><a href="#">Behance</a></li>
+                    <h4 id="footer-social">Social</h4>
+                    <ul aria-labelledby="footer-social">
+                        <li>
+                            <a href="https://instagram.com/felibro.oficial" target="_blank" rel="noopener noreferrer"
+                                aria-label="Instagram da Felibro (abre em nova aba)">
+                                Instagram
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://linkedin.com/company/felibro" target="_blank" rel="noopener noreferrer"
+                                aria-label="LinkedIn da Felibro (abre em nova aba)">
+                                LinkedIn
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://behance.net/felibro" target="_blank" rel="noopener noreferrer"
+                                aria-label="Behance da Felibro (abre em nova aba)">
+                                Behance
+                            </a>
+                        </li>
                     </ul>
                 </div>
 
                 <div class="nav-col">
-                    <h4>Legal</h4>
-                    <ul>
-                        <li><a href="#">Privacidade</a></li>
-                        <li><a href="#">Termos</a></li>
+                    <h4 id="footer-legal">Legal</h4>
+                    <ul aria-labelledby="footer-legal">
+                        <li><a href="/privacidade">Privacidade</a></li>
+                        <li><a href="/termos">Termos</a></li>
                     </ul>
                 </div>
-            </div>
 
-
+            </nav>
 
         </div>
 
         <div class="footer-bottom">
             <div class="container">
-                <p>&copy; 2026 Felibro. Crafted with ✨ for high performance.</p>
-                <button class="back-to-top" onclick="window.scrollTo({top: 0, behavior: 'smooth'})">
+                <p>
+                    <small>&copy; <time datetime="2026">2026</time> Felibro.
+                        Crafted with <span aria-label="carinho">✨</span> for high performance.</small>
+                </p>
+                <button class="back-to-top" type="button" aria-label="Voltar ao topo da página">
                     Voltar ao topo ↑
                 </button>
             </div>
         </div>
     </footer>
 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
-    <script src="script.js"></script>
+    <!-- Three.js: carregado de forma não-bloqueante (defer) -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js" defer crossorigin="anonymous"
+        referrerpolicy="no-referrer">
+        </script>
+    <script src="script.js" defer></script>
 
 </body>
 
